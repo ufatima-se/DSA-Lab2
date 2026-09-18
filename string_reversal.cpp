@@ -20,7 +20,7 @@ int main() {
     cout << "Enter size of string: ";
     cin >> size;
 
-    char* str = new char[size];
+    char* str = new char[size + 1];
 
     cout << "Enter a string to reverse: " ;
     cin >> str;
@@ -29,8 +29,11 @@ int main() {
 
     cout << "The reversed string is: " << str << endl;
 
+    delete[] str;
+
     return 0;
  }
+ 
 
  
 
