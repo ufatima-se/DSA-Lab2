@@ -28,7 +28,6 @@ int main() {
     reverse_str(str,size);
 
     cout << "The reversed string is: " << str << endl;
-
     delete[] str;
 
     return 0;
