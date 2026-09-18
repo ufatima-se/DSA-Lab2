@@ -69,10 +69,10 @@ int main() {
 }
 
 bool isSorted(const int* arr, const int size) {
- for (int i = 0; i < size - 2; i++) { // let's say someone iterate to size - 2
- if (arr[i] > arr[i + 1]) {
- return false;
- }
- }
+    for (int i = 0; i < size - 1; i++) { // corrected version
+        if (arr[i] > arr[i + 1]) {
+            return false;   
+        }
+    }
  return true;
 }
