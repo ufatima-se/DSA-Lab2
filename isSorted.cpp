@@ -47,6 +47,13 @@ void testAllEqualElements() {
 }
 
 
+// Additional test 3: for failing isSorted()
+void testUnsortedAtEnd() {
+    int arr[] = {1, 2, 3, 3, 5, 4};
+    assert(isSorted(arr, 5) == false);
+}
+
+
 int main() {
     testSortedArray();
     testUnsortedArray();
@@ -56,12 +63,13 @@ int main() {
     testNegativeValues();
     testEmptyArray();
     testAllEqualElements();
+    testUnsortedAtEnd();
     cout << "All tests passed!" << endl;
     return 0;
 }
 
 bool isSorted(const int* arr, const int size) {
- for (int i = 0; i < size - 1; i++) { // Bug is now corrected
+ for (int i = 0; i < size - 2; i++) { // let's say someone iterate to size - 2
  if (arr[i] > arr[i + 1]) {
  return false;
  }
